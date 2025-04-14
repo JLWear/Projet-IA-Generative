@@ -24,7 +24,7 @@ Il est composé de deux parties :
 IA-Generative/
 ├── main.py            # Backend FastAPI
 ├── fastapi-angular/   # Frontend Angular
-│   └── app/
+│   └── src/app/
 │       └── app.component.ts
 │       └── app.component.html
 │       └── app.component.sass
