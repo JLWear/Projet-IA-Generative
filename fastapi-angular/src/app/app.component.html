@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Générateur de texte GPT-2</h1>
+
+  <div class="history">
+    <h3>Historique des requêtes</h3>
+    <ul>
+      <li *ngFor="let entry of history" class="history-item">
+        <div class="history-entry">
+          <div class="history-prompt">
+            <strong>Prompt:</strong> {{ entry.prompt }}
+          </div>
+          
+          <div class="history-response">
+            <strong>Réponse:</strong> {{ entry.response }}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <textarea [(ngModel)]="prompt" placeholder="Entrez votre texte..."></textarea>
+  <button class="generate-button" (click)="generateText()" [disabled]="loading">
+    Générer
+  </button>
+
+  <div *ngIf="loading" class="spinner"></div>
+
+</div>
